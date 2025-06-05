@@ -15,6 +15,7 @@
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Warning: Due to Vapi(The AI Agent in use) getting constant updates, the interview feature may dysfunction.
 
 ## Getting Started
 ## <a name="introduction">🤖 Introduction</a>
