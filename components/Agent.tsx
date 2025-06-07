@@ -5,7 +5,7 @@ import Image from "next/image";
 import {cn} from "@/lib/utils";
 import {vapi} from "@/lib/vapi.sdk";
 import {useRouter} from "next/navigation";
-import {interviewer} from "@/constants";
+import { generator, interviewer } from "@/constants";
 import {createFeedback} from "@/lib/actions/general.action";
 
 enum CallStatus {
@@ -92,12 +92,36 @@ const Agent=({userName, userId, type,interviewId, questions}: AgentProps)=>{
         setCallStatus(CallStatus.CONNECTING);
 
         if(type === 'generate'){
-            await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
-                variableValues: {
-                    username: userName,
-                    userid: userId,
-                }
-            })
+            await vapi.start(
+                undefined,
+            {
+
+
+          variableValues: {
+
+
+            username: userName,
+
+
+            userid: userId,
+
+
+          },
+
+
+          clientMessages: ["transcript"],
+
+
+          serverMessages: [],
+
+        },
+            undefined,
+
+
+        generator
+
+
+      );
         } else{
             let formattedQuestions = '';
 
@@ -106,14 +130,18 @@ const Agent=({userName, userId, type,interviewId, questions}: AgentProps)=>{
             }
             await vapi.start(interviewer , {
                 variableValues: {
-                    questions: formattedQuestions
-                }
-            })
+                    questions: formattedQuestions,
+                },
+                 clientMessages: ["transcript"],
+
+
+        serverMessages: [],
+            });
         }
 
 
 
-    }
+    };
     const handleDisconnect = async()=>{
         setCallStatus(CallStatus.FINISHED);
 
