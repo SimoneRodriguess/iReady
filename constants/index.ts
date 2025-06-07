@@ -102,7 +102,7 @@ export const mappings = {
 export const generator: CreateWorkflowDTO = {
 
 
-{
+
   "name": "interviewprepworkflow",
   "nodes": [
     {
@@ -439,14 +439,7 @@ export const generator: CreateWorkflowDTO = {
       }
     }
   ],
-  "globalPrompt": ""
-},
 
-
-    },
-
-
-  ],
 
 
 };

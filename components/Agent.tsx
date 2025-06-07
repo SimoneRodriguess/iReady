@@ -109,7 +109,7 @@ const Agent=({userName, userId, type,interviewId, questions}: AgentProps)=>{
           },
 
 
-          clientMessages: ["transcript"],
+          clientMessages: ['transcript'],
 
 
           serverMessages: [],
