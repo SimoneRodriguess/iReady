@@ -1,3 +1,4 @@
+/*
 import {db} from "@/firebase/admin";
 import {generateObject} from "ai";
 import {google} from "@ai-sdk/google";
@@ -90,4 +91,4 @@ export async function getFeedbackByInterviewId(params: GetFeedbackByInterviewIdP
     return {
         id:feedbackDoc.id, ...feedbackDoc.data()
     }as Feedback;
-}
+}*/
