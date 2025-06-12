@@ -15,7 +15,7 @@
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-Warning: Due to Vapi(The AI Agent in use) getting constant updates, the interview feature may dysfunction.
+Run this vercel deployment to see a demo of the interview!(https://i-ready-la1ud7860-simonerodriguess-projects.vercel.app)
 
 ## Getting Started
 ## <a name="introduction">🤖 Introduction</a>
